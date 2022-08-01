@@ -12,7 +12,6 @@ const Home: NextPage = () => {
 
   return (
     <div className="bg-gray-900 antialiased selection:bg-purple-500/90 selection:text-white">
-    <div className="bg-teal-600">
       <Header />
       <Profile
         name={"Pradeep"}
@@ -21,7 +20,6 @@ const Home: NextPage = () => {
         short_title={"SWE"}
         logo_url={"https://assets.upstox.com/common/images/upstox-logo-primary.svg"}
       />
-    </div>
     </div>
   );
 
