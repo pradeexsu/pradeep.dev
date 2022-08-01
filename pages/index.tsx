@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import BgTexture from './components/bg-tecture';
+import Profile from './components/profile';
 
 const Header: React.FC = () => (
   <Head>
@@ -9,21 +8,21 @@ const Header: React.FC = () => (
     <link rel="icon" href="/favicon.png" />
   </Head>);
 
-
 const Home: NextPage = () => {
+
   return (
-    <>
+    <div className="bg-gray-900 antialiased selection:bg-purple-500/90 selection:text-white">
+    <div className="bg-teal-600">
       <Header />
-      <BgTexture>
-        <div className='w-100wh h-100vh'>
-          <h1 className='text-4xl'>
-            Pradeep
-            Pradeep
-            Pradeep
-          </h1>
-        </div>
-      </BgTexture>
-    </>
+      <Profile
+        name={"Pradeep"}
+        title={"Software Engineer"}
+        image_url={"https://i.ibb.co/bQbRxkm/image.png"}
+        short_title={"SWE"}
+        logo_url={"https://assets.upstox.com/common/images/upstox-logo-primary.svg"}
+      />
+    </div>
+    </div>
   );
 
 }
