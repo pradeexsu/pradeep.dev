@@ -11,7 +11,7 @@ const Header: React.FC = () => (
 const Home: NextPage = () => {
 
   return (
-    <div className="bg-gray-900 antialiased selection:bg-purple-500/90 selection:text-white">
+    <div>
       <Header />
       <Profile
         name={"Pradeep"}
