@@ -9,7 +9,6 @@ const Header: React.FC = () => (
   </Head>);
 
 const Home: NextPage = () => {
-
   return (
     <div>
       <Header />
