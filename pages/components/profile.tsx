@@ -17,9 +17,8 @@ const Profile: React.FC<ProfileProps> = ({ name, image_url, title, logo_url, sho
             <div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-no-repeat opacity-[0.3] will-change-transform" >
             </div></div> */}
 
-        <main className="relative z-10 grid grid-cols-[1fr,min(640px,100%),1fr] gap-y-8 px-4 pt-48 text-lg text-rose-100/90 xl:grid-cols-[1fr,minmax(auto,280px),min(640px,100%),minmax(auto,280px),1fr] xl:gap-x-8 xl:px-0 [&>*]:col-start-2 xl:[&>*]:col-start-3">
 
-            <div className="transition duration-300 opacity-100">
+        <div className="transition duration-300 opacity-100 mb-24">
                 <div className="flex items-center space-x-6 rounded-md">
                     <div className="rounded-full bg-gradient-to-tl from-purple-700/60 to-rose-400/60 shadow-lg p-[3px] ring-[5px] ring-purple-500/10">
                         <div className="rounded-full p-px h-[64px] w-[64px]">
@@ -85,8 +84,6 @@ const Profile: React.FC<ProfileProps> = ({ name, image_url, title, logo_url, sho
                     </div>
                 </div>
             </div>
-        </main>
-
     </div>
 
 </>);
