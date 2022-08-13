@@ -17,7 +17,7 @@ const Timeline: React.FC<TimeLineItemProp[]> = (
 
   return (
     <>
-      <div className="mt-36 pb-36 text-base ml-8">
+      <div className="mt-36 pb-36 text-base ml-20">
         <ol className="relative border-l border-gray-200 dark:border-white">
           {experince.map((ex) => (
             <TimeLineItem {...ex} key={ex.title}/>

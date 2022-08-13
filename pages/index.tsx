@@ -91,7 +91,7 @@ export const getServerSideProps: GetServerSideProps = async (context: any) => {
       description: `Migrated existing NodeJs Backend to Java Spring Boot for IPOs and Mutual Funds project.
       Contributed to the development of high-performance gRPC and REST micro-services in Java Spring Boot.
       Researched and evaluated various solutions to problems and reduce friction in the development lifecycle, documenting and testing.`,
-      organization: "Upstox",
+      organization: null,
       logoUrl: null,
     },
     {
@@ -109,7 +109,7 @@ Maintaining Application by fixing bugs and improving application performance.`,
       date: "Jan 2021 - Jun 2021",
       description: `Delivered a major project which provide user login interface application for WRDP console based software.`,
       organization: "Fiverr.com",
-      logoUrl: "https://i.ibb.co/GdzMJn6/image.png",
+      logoUrl: "https://i.ibb.co/kyV6MX2/fiverr-480.png",
       // logoUrl: "https://i.ibb.co/vchNJML/fiverr-new-logo.png",
       // logoUrl: "https://img.icons8.com/color/96/000000/fiverr.png",
     },
