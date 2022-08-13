@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+
+details[open] > *:not(summary) {
+  animation: details-show 500ms ease-in-out;
+}
+
+summary {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
