@@ -20,7 +20,7 @@ interface HomeProps {
 }
 const Header: React.FC = () => (
   <Head>
-    <title>●° Pradeep </title>
+    <title>Pradeep° </title>
     <link rel="icon" href="/favicon.png" />
   </Head>
 );
@@ -55,13 +55,19 @@ const Home: NextPage<any> = (props: HomeProps) => {
     link: "#",
   };
   return (
-    <div className="bg-[#241e1c] antialiased selection:bg-purple-500/90 selection:text-white opacity-100">
+    <div className="bg-[#241e1c] antialiased selection:bg-purple-500/90 selection:text-white opacity-100 scroll-smooth">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-no-repeat opacity-[0.3] will-change-transform"></div>
       </div>
+
+      {/* <video autoPlay={true} loop muted className="absolute z-10 w-auto min-w-full max-h-full max-w-none">
+    <source src="/Pexels Videos 2324166.mp4" type="video/mp4" />Your browser does not support the video tag.
+  </video> */}
+
       <Header />
       <BgTexture />
       <main className="relative z-10 grid grid-cols-[1fr,min(640px,100%),1fr] gap-y-8 px-4 pt-48 text-lg text-rose-100/90 xl:grid-cols-[1fr,minmax(auto,280px),min(640px,100%),minmax(auto,280px),1fr] xl:gap-x-8 xl:px-0 [&>*]:col-start-2 xl:[&>*]:col-start-3">
+      
         <Profile
           name={name}
           title={title}
@@ -69,14 +75,15 @@ const Home: NextPage<any> = (props: HomeProps) => {
           short_title={shortTitle}
           logo_url={logoUrl}
         />
-        {/* <Timeline {...timeLineItemProps} /> */}
+        
+        <Timeline {...timeLineItemProps} />
         <Projects {...projects} />
         <PostCard {...postCardData} />
         <PostCard {...postCardData} />
-        <PostCard {...postCardData} />
-        <PostCard {...postCardData} />
-        <PostCard {...postCardData} />
-
+{/* 
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-no-repeat opacity-[0.3] will-change-transform "></div>
+        </div> */}
         <Footer />
       </main>
     </div>
