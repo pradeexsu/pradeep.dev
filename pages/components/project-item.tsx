@@ -26,13 +26,13 @@ const ProjectItem: React.FC<ProjectItemProp> = ({
           {title}
         </h3>
         <div className="flex flex-wrap space-x-2 text-base text-rose-100/50">
-          <div>{date}</div>
+          <div className="italic text-sm">{date}</div>
         </div>
         <p className="mt-4 text-lg text-rose-100/70 line-clamp-3">
           {description}
         </p>
-        <LinkItem text={"code link"} link={"#"} color={"purple-600"} />
-        <LinkItem text={"demployment link"} link={"#"} color={"purple-600"} />
+        <LinkItem text={"code link"} link={"#"} />
+        <LinkItem text={"demployment link"} link={"#"} />
         {ss_url && (
           <details className="question py-4 border-grey-lighter">
             <summary className="flex items-center text-sm select-none mb-2">
@@ -46,8 +46,8 @@ const ProjectItem: React.FC<ProjectItemProp> = ({
               </svg>
             </summary>
 
-            <p className="content">
-              <img src={ss_url} alt={title} />
+            <p>
+              <img className="select-none" src={ss_url} alt={title} />
             </p>
           </details>
         )}

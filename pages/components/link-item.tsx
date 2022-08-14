@@ -1,21 +1,19 @@
-export const LinkItem: React.FC<{ link: string; text: string, color:string }> = ({
+export const LinkItem: React.FC<{ link: string; text: string }> = ({
   link,
   text,
-  color
 }: {
   link: string;
   text: string;
-  color: string;
 }) => (
   <>
     <a
       href={link}
-      className={`inline-flex items-center text-green-400 hover:underline mr-5`}
+      className="link link-underline link-underline-black"
       target="_blank"
     >
       {text}
       <svg
-        className="ml-2 w-5 h-5"
+        className="mx-2 w-5 h-5 inline"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
