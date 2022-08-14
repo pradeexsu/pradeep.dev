@@ -35,7 +35,7 @@ const ProjectItem: React.FC<ProjectItemProp> = ({
         <LinkItem text={"demployment link"} link={"#"} />
         {ss_url && (
           <details className="question py-4 border-grey-lighter">
-            <summary className="flex items-center text-sm select-none mb-2">
+            <summary className="flex items-center text-sm select-none mb-2 text-skin-base">
               screenshot
               <svg
                 className="fill-current opacity-75 w-4 h-4 rotate-90 ml-1"

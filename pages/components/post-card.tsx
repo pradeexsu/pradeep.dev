@@ -17,8 +17,6 @@ const PostCard: React.FC<PostProps> = ({
   likes,
   link,
 }: PostProps) => {
-  //   const  = postProps;
-  console.log({ title, description, date, views, likes, link });
   return (
     <div>
       <a
