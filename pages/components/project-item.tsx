@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { LinkItem } from "./link-item";
 
 export type ProjectItemProp = {
@@ -17,9 +17,10 @@ const ProjectItem: React.FC<ProjectItemProp> = ({
   deployment_link,
   code_link,
   ss_url,
-}: ProjectItemProp) => (
-  <>
-    {/* bg-dusk md:group-hover:opacity-50 */}
+}: ProjectItemProp) => {
+  const [isExpended, toggleExpend] = useState(false);
+
+  return (
     <div className="hover:opacity-important hover:scale-11/10x">
       <div className="block overflow-hidden bg-white/5 p-7 shadow-surface-elevation-low transition duration-300 hover:bg-white/10 hover:shadow-surface-elevation-medium focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/70">
         <h3 className="text-xl text-rose-100/90 transition duration-300 line-clamp-2 hover:text-rose-100/50 ease-linear">
@@ -35,10 +36,15 @@ const ProjectItem: React.FC<ProjectItemProp> = ({
         <LinkItem text={"demployment link"} link={"#"} />
         {ss_url && (
           <details className="question py-4 border-grey-lighter">
-            <summary className="flex items-center text-sm select-none mb-2 text-skin-base">
+            <summary
+              className="flex items-center text-sm select-none mb-2 text-skin-base"
+              onClick={() => toggleExpend(!isExpended)}
+            >
               screenshot
               <svg
-                className="fill-current opacity-75 w-4 h-4 rotate-90 ml-1"
+                className={`fill-current opacity-75 w-4 h-4 ml-1 ${
+                  !isExpended ? null : "rotate-90"
+                }`}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
               >
@@ -53,7 +59,7 @@ const ProjectItem: React.FC<ProjectItemProp> = ({
         )}
       </div>
     </div>
-  </>
-);
+  );
+};
 
 export default ProjectItem;

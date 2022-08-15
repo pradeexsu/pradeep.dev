@@ -32,7 +32,7 @@ summary {
 
 .link-underline-black {
   background-image: linear-gradient(transparent, transparent),
-    linear-gradient(#00E0C7, #5761B2);
+    linear-gradient(#00e0c7, #00e0c7);
 }
 
 .link-underline:hover {
@@ -43,14 +43,18 @@ summary {
 
 @layer base {
   :root {
-    --color-primary: #5761B2;
-    --color-secondary: #1FC5A8;
-    --color-selection-forground: #00E0C7;
-    --color-selection-background: #292C35;
-    --color-dark:#17181D ;
+    --color-primary: #5761b2;
+    --color-secondary: #1fc5a8;
+    --color-selection-forground: #00e0c7;
+    --color-selection-background: #dddddd;
+    --color-dark: #17181d;
 
-    --color-fill-base1: #E09145;
-    --color-fill-base2: #FCD9B8;
-    --color-fill-base3: #00FFFF;
+    --color-fill-base1: #e09145;
+    --color-fill-base2: #fcd9b8;
+    --color-fill-base3: #00ffff;
   }
+}
+
+.link {
+  @apply link-underline link-underline-black;
 }

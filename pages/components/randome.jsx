@@ -13,14 +13,14 @@ function stackOverflow(){
                 viewBox="10 10 55 55"
                 aria-hidden="true"
                 fill-rule="evenodd"
-                clip-rule="evenodd"
+                clipRule="evenodd"
                 baseProfile="basic"
                 className="w-[18px] transform text-rose-100 transition delay-100 duration-500 ease-out group-hover:scale-110"
               >
                 <path
                   fill-rule="evenodd"
                   d="M50.62,40.505h4.499V58.5H14.63V40.505h4.499v13.496H50.62V40.505z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
                 <path d="M24.031,39.168l0.929-4.419l22.095,4.646l-0.929,4.417L24.031,39.168z" />
                 <path d="M26.955,28.588l1.906-4.093l20.468,9.532l-1.907,4.093L26.955,28.588z" />
