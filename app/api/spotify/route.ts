@@ -1,5 +1,5 @@
 import axios from "axios";
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 import querystring from "querystring";
 
 const {
@@ -40,7 +40,7 @@ const getNowPlaying = async () => {
   });
 };
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(_: NextRequest, __: NextResponse) {
   const response = await getNowPlaying();
   console.log(response.data)
   if (

@@ -81,8 +81,8 @@ export default function Page() {
       <section>
         <Header />
         <p className="prose prose-neutral dark:prose-invert">
-          I'm a Fullstack engineer, and a problem solver. I currently work as
-          the software engineer &nbsp;
+          {'I\'m a Fullstack engineer, and a problem solver. I currently work as'}
+         {' the software engineer '}
           <a href="http://upstox.com" target="_blank" className="link-hover">
             @Upstox
           </a>
@@ -125,7 +125,7 @@ export default function Page() {
 
         <div className="prose prose-neutral dark:prose-invert">
           <p>
-            I've worked with and advised companies on{" "}
+            {"I've worked with and advised companies on "}
             <a href="/blog/developer-marketing">developer marketing</a>,{" "}
             <a href="/blog/devrel">developer relations</a>, building open-source
             communities, product-led growth, and more.
