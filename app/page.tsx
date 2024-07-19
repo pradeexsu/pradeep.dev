@@ -24,15 +24,15 @@ export default function Page() {
           >
             {" @Upstox "}
           </LinkPreview>
-          , where I've built a robust financial system using state-of-the-art
+          {`, where I've built a robust financial system using state-of-the-art
           technology. What I'm learning aboutshipping great products, becoming a
           better developer, and growing a career in tech complements my hands-on
-          experience in crafting impactful solutions.
+          experience in crafting impactful solutions.`}
         </p>
         <br />
         <p>
-          Beyond tech stuff, I'm passionate about exploring the great outdoors,
-          including mountain🏔️ trekking, skateboard🛹 walking, and sketching.
+          {`Beyond tech stuff, I'm passionate about exploring the great outdoors,
+          including mountain🏔️ trekking, skateboard🛹 walking, and sketching.`}
         </p>
       </div>
       <MyProjects />
