@@ -1,13 +1,11 @@
 "use client";
+
 import React from "react";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
-import avatar from '@/public/pradeep.jpg'
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 export const FloatingNav = ({
   navItems,
@@ -20,10 +18,10 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
-
+  const path = usePathname();
 
   return (
-    <AnimatePresence mode="wait" >
+    <AnimatePresence mode="wait">
       <motion.div
         initial={{
           opacity: 1,
@@ -37,26 +35,36 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-bgGray/70 backdrop-blur-sm bg-[#E7E7E7]/70 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-[10px] py-2  items-center justify-center space-x-4",
+          "flex max-w-fit fixed top-8 flotingnav lg:right-[26.5%]  mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-bgGray/70 backdrop-blur-sm bg-[#E7E7E7]/70 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-[3px] pl-4 py-[3px]  items-center justify-center space-x-4",
           className
         )}
       >
-        <Image src={avatar} width={36} alt={"pradeep"} className="rounded-full scale-125 bg-cover border border-white/30" />
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative  items-center flex space-x-1 ",
+              navItem.link == path
+                ? "text-blue-500 hover:text-blue-300"
+                : "dark:text-neutral-50 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
-            <span className="block ">{navItem.icon}</span>
+            {/* <span className="block ">{navItem.icon}</span> */}
             <span className=" block text-sm">{navItem.name}</span>
+
+            <span
+              className={clsx(
+                "absolute inset-x-0 -bottom-px bg-gradient-to-r from-blue-700  via-blue-500 to-transparent h-px transition-all duration-500",
+                navItem.link == path ? "w-full" : "w-0 opacity-0"
+              )}
+            />
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <a href="mailto:prdeexsu@gmail.com" target="_blank">Contact</a>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        <button className=" border border-blue-500/70 text-xs font-medium relative   text-black dark:text-white px-3 py-[4px] rounded-full">
+          <a href="mailto:prdeexsu@gmail.com" target="_blank">
+            Contact
+          </a>
         </button>
       </motion.div>
     </AnimatePresence>

@@ -1,12 +1,15 @@
-import React from 'react'
-import { LinkPreview } from '../components/ui/link-preview'
+"use client";
+import React from "react";
+import MyExperence from "../components/MyExperence";
 
 function page() {
   return (
-    <LinkPreview url="http://upstox.com" className="link border-2">
-    Upstox
-  </LinkPreview>
-  )
+    <div>
+      <h1 className="text-2xl my-10">Work Changlogs</h1>
+
+      <MyExperence/>
+    </div>
+  );
 }
 
-export default page
+export default page;
