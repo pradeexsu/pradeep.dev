@@ -5,6 +5,18 @@ import { Fragment } from "react";
 import { LinkPreview } from "./components/ui/link-preview";
 import MyLocation from "./components/MyLocation";
 import MyProjects from "./components/MyProjects";
+import { Metadata } from "next";
+import ogImage from "@/app/opengraph-image.jpg";
+/*
+<Head>
+        <meta property="og:title" content="Pradeep Suthar" />
+        <meta
+          property="og:description"
+          content="Software Engineer at Upstox | Full-Stack developer, JavaScript enthusiast. I love building products and web apps that impact millions of lives."
+        />
+      </Head>
+*/
+
 
 export default function Page() {
   return (
